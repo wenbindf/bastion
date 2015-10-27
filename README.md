@@ -4,8 +4,7 @@
 
 Create a `authorized_keys` file with all public keys that can connect to this bastion.
 
-Then run the following command to start the bastion. 
-first you need to create authorized_keys file. 
+Then run the following command to start the bastion. first you need to create authorized_keys file.      
 	docker run --name bastion -d --restart=always -v $(pwd)/authorized_keys:/home/dev/.ssh/authorized_keys:ro -p 9022:9022 chentm/bastion
 
 To connect through the bastion
